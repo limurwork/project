@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <header class="clearfix">
+
+
+  <div id="nav-button"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
+  <nav style="overflow: auto;">
+    <ul id="nav" style="height: auto;">
+
+
+
+    </ul>
+  </nav>
+
+</header>
+
+<body>
+
+<div class="futers">
+    <h1>Добавить запись</h1>
+    <form method="get">
+        {% csrf_token %}<br>
+
+
+        <a>Контракт         {{ forma.Addres_Hause }}<p></a>
+        <a>Тема             {{ forma.Namber_Apartmens }}<p></a>
+        <a>Начало действия  {{ forma.ownership }}<p></a>
+        <a>Окончание        {{ forma.Name }}<p></a>
+        <a>Ссылка на облако {{ forma.Date_Of_Birth }}<p></a>
+        <a>Ссылка на облако {{ forma.Place_Of_Birth }}<p></a>
+        <a>Ссылка на облако {{ forma.Dokument_Right }}<p></a>
+        <a>Ссылка на облако {{ forma.personal_account }}<p></a>
+        <a>Ссылка на облако {{ forma.Size_Apartment }}<p></a>
+        <span>{{ erora }}</span>
+        <button class="btn btn-success" type="submit">Ввести</button>
+
+    </form>
+</div>
+<div class="futers">
+    <form method="post">
+    {% csrf_token %}<br>
+        <a>Контракт {{ form.Contract }}<p></a>
+        <a>Контракт {{ form.subject_contract }}<p></a>
+        <a>Контракт {{ form.date_contract }}<p></a>
+        <a>Контракт {{ form.end_contract }}<p></a>
+        <a>Контракт {{ form.href_cloud }}<p></a>
+    <span>{{ eror }}</span>
+
+    <button class="btn btn-success" type="submit">Ввести</button>
+</form>
+
+</div>
+
+</body>
+</html>
